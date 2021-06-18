@@ -8,57 +8,70 @@
 
     <title>Collapsible sidebar using Bootstrap 4</title>
     <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
-    <script type="text/javascript" src="js/bootstrap.bundle.js"></script>
     <script type="text/javascript" src="js/jquery-3.6.0.min.js"></script>
-
+    <script type="text/javascript" src="js/bootstrap.bundle.js"></script>
+    <script type="text/javascript" src="./js/html5-qrcode.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
-
+<script type="text/javascript">
+    $(".panel-heading").onclick(
+       function() {
+        $('.panel-collapse').collapse('show');
+    }, function() {
+        $('.panel-collapse').collapse('hide');
+    }
+    );
+</script>
 <body>
 
     <div class="wrapper">
         <!-- Sidebar Holder -->
         <nav id="sidebar">
             <div class="sidebar-header">
-                <h3>Bootstrap Sidebar</h3>
+                <h3>AttenDice</h3>
+                <p>Isi Kehadiran Saja</p>
             </div>
 
             <ul class="list-unstyled components">
-                <p>Dummy Heading</p>
-                <li class="active">
-                    <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Home</a>
-                    <ul class="collapse list-unstyled" id="homeSubmenu">
-                        <li>
-                            <a href="#">Home 1</a>
-                        </li>
-                        <li>
-                            <a href="#">Home 2</a>
-                        </li>
-                        <li>
-                            <a href="#">Home 3</a>
-                        </li>
-                    </ul>
-                </li>
+                <div class="panel panel-default"> 
+                    <li class="panel-heading">
+                        <a  class="nodecoration panel-title lead" data-toggle="collapse" data-parent="#panel-814345" href="#panel-element-566205">Data Master <i class="fa fa-angle-down" aria-hidden="true"></i>
+                        </a>
+                    </li>
+                    <div id="panel-element-566205" class="panel-collapse collapse">
+                        <div class="panel-body border-top">
+                            <li class="">
+                                <a class="pl-4" href="">Operator</a>
+                            </li>
+                            <li class="">
+                                <a class="pl-4" href="">Bahan baku</a>
+                            </li>
+                            <li  class="">
+                                <a class="pl-4" href="">Mesin Setengah Jadi</a>
+                            </li>
+                            <li class="">
+                                <a class="pl-4" href="">Mesin Jadi</a>
+                            </li>
+                            <li class="">
+                                <a class="pl-4" href="">Produk Setengah jadi</a>
+                            </li>
+                            <li class="">
+                                <a class="pl-4" href="">Produk jadi</a>
+                            </li>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <li class="">
+                        <a href="">Produksi</a>
+                    </li>
+                </div>
+                <br>
+
+
                 <li>
-                    <a href="#">About</a>
-                    <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Pages</a>
-                    <ul class="collapse list-unstyled" id="pageSubmenu">
-                        <li>
-                            <a href="#">Page 1</a>
-                        </li>
-                        <li>
-                            <a href="#">Page 2</a>
-                        </li>
-                        <li>
-                            <a href="#">Page 3</a>
-                        </li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="#">Portfolio</a>
-                </li>
-                <li>
-                    <a href="#">Contact</a>
+                    <a class="btn border-0" style="background-color: #5566ab" href="../logout.php">Logout</a>
                 </li>
             </ul>
 
@@ -106,24 +119,9 @@
                 </div>
             </nav>
             
-            <h2>Collapsible Sidebar Using Bootstrap 4</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-
-            <div class="line"></div>
-
-            <h2>Lorem Ipsum Dolor</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-
-            <div class="line"></div>
-
-            <h2>Lorem Ipsum Dolor</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-
-            <div class="line"></div>
-
-            <h3>Lorem Ipsum Dolor</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <div class="main_content">
+                <div id="reader" width="600px"></div>
+            </div>
         </div>
     </div>
 
